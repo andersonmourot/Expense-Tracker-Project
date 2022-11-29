@@ -1,23 +1,24 @@
 # Expense-Tracker-Project
 
 ## Title
-"Dinero" The Expense App Tracker
+"Dinero" The Expense Tracker App
 
 ## Description
+The "Dinero" The Expense Tracker App will help you organize and track expenses that need to be paid in the future.
 
 
 
 ## User Story
 
 ```
-AS A a person unfamlier to recipies OR AS someone wanting to try new recipies
-I WANT to be able to search food recipies
-AND I WANT to be able to search drink recipies
-SO I can enjoy meals and drinks that I want to enjoy
+AS A a person who wants to track their expenses
+I WANT to be able to create an account and track my expenses
+AND I WANT to be able to see what payments are coming up and what needs to be paid soon
+SO I can never miss a payment
 ```
 
-link to my GitHub Repository:
-
+link to my GitHub Repository:t
+https://github.com/andersonmourot/Expense-Tracker-Project
 
 ## License
 
