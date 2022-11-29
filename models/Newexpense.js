@@ -5,6 +5,12 @@ class Newexpense extends Model {}
 
 Newexpense.init(
   {
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
+    },
     billtype: {
       type: DataTypes.STRING,
       allowNull: false,
