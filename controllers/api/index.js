@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const userRoutes = require('./userRoutes');
-const expenseRoutes = require('./expenseRoutes');
+const expenseRoutes = require('./newexpenseRoutes');
 
 router.use('/users', userRoutes);
 router.use('/expense', expenseRoutes);
