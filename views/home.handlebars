@@ -1,5 +1,5 @@
   {{#if expenses.length}}
-  <div class="col-md-6 project-list">
+  <div class="col-md-6 expense-list">
     <h3>Active Expenses:</h3>
 
     {{#each expense as |expense|}}
@@ -8,7 +8,7 @@
         <h4><a href="/newexpense/{{newexpense.id}}">{{newexpense.name}}</a></h4>
       </div>
       <div class="col-md-4">
-        <button class="btn btn-sm btn-warning" data-id="{{project.id}}">REMOVE</button>
+        <button class="btn btn-sm btn-warning" data-id="{{newexpense.id}}">REMOVE</button>
       </div>
     </div>
     {{/each}}

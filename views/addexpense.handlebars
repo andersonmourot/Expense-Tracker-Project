@@ -18,7 +18,7 @@
         <input class="form-input" type="number" id="payment-amount" name="payment-amount" />
       </div>
       <div class="form-group">
-        <label for="due-date">Payement Due Date:</label>
+        <label for="due-date">Payement Due Date Range:</label>
         <textarea class="form-input" id="due-date" name="due-date"></textarea>
       </div>
       <div class="form-group">
@@ -26,7 +26,7 @@
         <textarea class="form-input" id="expense-desc" name="expense-desc"></textarea>
       </div>
       <div class="form-group">
-        <label for="type-signup">Type:</label>
+        <label for="expense-type">Type:</label>
         <select class="custom-select">
           <option selected>Choose an expense type</option>
           <option value="1">Entertainment</option>
@@ -42,13 +42,13 @@
   </div>
 
   {{#if Newexpense.length}}
-  <div class="col-md-6 project-list">
+  <div class="col-md-6 expense-list">
     <h3>Active Expenses:</h3>
 
     {{#each Newexpenses as |Newexpense|}}
     <div class="row mb-2">
       <div class="col-md-8">
-        <h4><a href="/project/{{Newexpense.id}}">{{Newexpense.name}}</a></h4>
+        <h4><a href="/expense/{{Newexpense.id}}">{{Newexpense.name}}</a></h4>
       </div>
       <div class="col-md-4">
         <button class="btn btn-danger" data-id="{{Newexpense.id}}">DELETE</button>

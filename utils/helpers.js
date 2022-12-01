@@ -1,22 +1,20 @@
 module.exports = {
-    format_date: (date) => {
-      // Format date as MM/DD/YYYY
-      return date.toLocaleDateString();
-    },
-    format_amount: (amount) => {
-      // format large numbers with commas
-      return parseInt(amount).toLocaleString();
-    },
-    get_emoji: () => {
-      const randomNum = Math.random();
-  
-      // Return a random emoji
-      if (randomNum > 0.7) {
-        return `<span for="img" aria-label="lightbulb">💡</span>`;
-      } else if (randomNum > 0.4) {
-        return `<span for="img" aria-label="laptop">💻</span>`;
-      } else {
-        return `<span for="img" aria-label="gear">⚙️</span>`;
+  sortBySoonest: (Newexpense) => {
+    const currentDate = new Date();
+    return Newexpense.sort(function (a, b) {
+      let dateA = new Date(a.date);
+      let dateB = new Date(b.date);
+      // Move all the dates that are in the past to the end of the array
+      if (dateA < currentDate || dateB < currentDate) {
+        return -1;
       }
-    },
-  };
+      // Order by soonest
+      return dateA - dateB;
+    });
+  },
+  sortByAmount: (Newexpense) => {
+    Newexpense.cost.sort(function(a, b) {
+      return a - b;
+    });
+  }
+};
