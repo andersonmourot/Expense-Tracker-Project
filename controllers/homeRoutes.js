@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Newexpense, User } = require('../models/index');
+const { Newexpense, User } = require('../models/Index');
 const auth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -68,7 +68,7 @@ router.get('/addexpense', auth, async (req, res) => {
 
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
-    res.redirect('/home');
+    res.redirect('/');
     return;
   }
 
