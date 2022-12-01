@@ -1,3 +1,4 @@
+// all of the requiremnets being pulled in 
 const path = require('path');
 const express = require('express');
 const session = require('express-session');
@@ -28,6 +29,7 @@ const sess = {
   })
 };
 
+// Accessing the different resources that are used in this apps
 app.use(session(sess));
 
 app.engine('handlebars', hbs.engine);
@@ -38,6 +40,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
+
+
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));

@@ -3,6 +3,7 @@ const sequelize = require("../config/connection");
 
 class Newexpense extends Model {}
 
+// Newexepnse model with the attributes for the user's expenses
 Newexpense.init(
   {
     id: {
@@ -34,7 +35,7 @@ Newexpense.init(
     user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: "user",
+        model: "User",
         key: "id",
       },
     },

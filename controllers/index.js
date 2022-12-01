@@ -1,3 +1,4 @@
+// Requiring and connecting the routes and router
 const router = require('express').Router();
 const apiRoutes = require('./api');
 const homeRoutes = require('./homeRoutes');

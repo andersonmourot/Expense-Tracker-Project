@@ -1,3 +1,4 @@
+//Helper funcions for sorting by date and amount
 module.exports = {
   sortBySoonest: (Newexpense) => {
     const currentDate = new Date();

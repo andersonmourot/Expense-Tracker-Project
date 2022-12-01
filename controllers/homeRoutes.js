@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Newexpense, User } = require('../models/Index');
 const auth = require('../utils/auth');
 
+//Launches main page on login
 router.get('/', async (req, res) => {
   try {
     const expenseData = await Newexpense.findAll({
@@ -48,7 +49,10 @@ router.get('/newexpense/:id', async (req, res) => {
   }
 });
 
+// Pulls up the addexpense page
 router.get('/addexpense', auth, async (req, res) => {
+
+  console.log("In Add Expense Route")
   try {
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
@@ -56,6 +60,7 @@ router.get('/addexpense', auth, async (req, res) => {
     });
 
     const user = userData.get({ plain: true });
+    console.log(user);
 
     res.render('addexpense', {
       ...user,
@@ -66,6 +71,7 @@ router.get('/addexpense', auth, async (req, res) => {
   }
 });
 
+// Runs the login opperation
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
     res.redirect('/');

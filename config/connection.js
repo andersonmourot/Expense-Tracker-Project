@@ -1,3 +1,4 @@
+// Connection and user access to sequelize
 const Sequelize = require('sequelize');
 require('dotenv').config();
 
