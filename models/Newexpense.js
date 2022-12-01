@@ -30,7 +30,7 @@ Newexpense.init(
     due_date_range: {
       type: DataTypes.DATE,
       allowNull: true,
-      defaultValue: 567834
+      defaultValue: 12-20-22
     },
     description: {
       type: DataTypes.STRING,

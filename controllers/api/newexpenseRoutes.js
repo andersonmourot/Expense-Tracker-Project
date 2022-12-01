@@ -72,7 +72,6 @@ router.delete('/:id', auth, async (req, res) => {
     const expenseData = await Newexpense.destroy({
       where: {
         id: req.params.id,
-        // user_id: req.session.user_id,
       },
     });
 
