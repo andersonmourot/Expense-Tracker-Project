@@ -23,7 +23,7 @@ const newForm = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace("/profile");
+      document.location.replace("/");
     } else {
       alert("Failed to create new expense!");
     }
@@ -39,7 +39,7 @@ const delButtonHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace("/profile");
+      document.location.replace("/");
     } else {
       alert("Failed to delete expense");
     }
