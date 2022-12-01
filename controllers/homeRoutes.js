@@ -5,6 +5,7 @@ const auth = require('../utils/auth');
 //Launches main page on login
 router.get('/', async (req, res) => {
   try {
+    console.log("hot here!")
     const expenseData = await Newexpense.findAll({
       include: [
         {
@@ -16,6 +17,7 @@ router.get('/', async (req, res) => {
 
     const expenses = expenseData.map((newexpense) => newexpense.get({ plain: true }));
 
+    console.log("hot here!!!!", expenses)
     res.render('home', { 
       expenses, 
       logged_in: req.session.logged_in 

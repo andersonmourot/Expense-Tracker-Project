@@ -18,16 +18,19 @@ Newexpense.init(
     },
     billtype: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       primaryKey: true,
+      defaultValue: 'rent'
     },
     cost: {
       type: DataTypes.DECIMAL,
-      allowNull: false,
+      allowNull: true,
+      defaultValue: 5.6
     },
     due_date_range: {
       type: DataTypes.DATE,
-      allowNull: false,
+      allowNull: true,
+      defaultValue: 567834
     },
     description: {
       type: DataTypes.STRING,
