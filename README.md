@@ -10,7 +10,6 @@ The "Dinero" Expense Tracker App will help you organize and track expenses that 
 This app uses Node.js and Express.js, with Handlebars.js as the tempate engine. We used Materialize as our unique technology that was not taught in class. MySQL and Sequelize are both required to run this app and it follows the MVC paradigm.
 
 
-
 ## User Story
 
 ```
@@ -22,6 +21,13 @@ SO I can never miss a payment
 
 link to my GitHub Repository:t
 https://github.com/andersonmourot/Expense-Tracker-Project
+
+
+## Screenshot
+
+<img width="1724" alt="Screen Shot 2022-12-01 at 10 14 22 AM" src="https://user-images.githubusercontent.com/109611768/205103946-5251d853-c4a3-4fb9-af7d-944c2419c75c.png">
+
+
 
 ## License
 
