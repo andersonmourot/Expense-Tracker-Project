@@ -25,8 +25,10 @@ https://github.com/andersonmourot/Expense-Tracker-Project
 
 ## Screenshot
 
-<img width="1724" alt="Screen Shot 2022-12-01 at 10 14 22 AM" src="https://user-images.githubusercontent.com/109611768/205103946-5251d853-c4a3-4fb9-af7d-944c2419c75c.png">
+![Screen Shot 2022-12-01 at 10 59 16 AM](https://user-images.githubusercontent.com/109611768/205113911-56fb4b28-a549-4270-8857-89097c7e4a54.png)
 
+
+<img width="1724" alt="Screen Shot 2022-12-01 at 10 14 22 AM" src="https://user-images.githubusercontent.com/109611768/205103946-5251d853-c4a3-4fb9-af7d-944c2419c75c.png">
 
 
 ## License
