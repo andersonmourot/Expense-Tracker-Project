@@ -40,22 +40,21 @@
   </div>
 
 <!-- HTML for the active expenses the user has -->
-{{#if user.expenses}}
-  {{#if Newexpense.length}}
+  {{#if Newexpenses.length}}
     <div class="col-md-6 expense-list">
       <h3>Active Expenses:</h3>
 
-      {{#each Newexpenses as |Newexpense|}}
+      {{#each Newexpenses as |expense|}}
         <div class="row mb-2">
           <div class="col-md-8">
             <h4><a
-                href="/expense/{{Newexpense.id}}"
-              >{{Newexpense.name}}</a></h4>
+                href="/expense/{{expense.id}}"
+              >{{expense.name}}</a></h4>
           </div>
           <div class="col-md-4">
             <button
-              class="btn btn-danger"
-              data-id="{{Newexpense.id}}"
+              class="btn btn-danger del-user-button"
+              data-id="{{expense.id}}"
             >DELETE</button>
           </div>
         </div>

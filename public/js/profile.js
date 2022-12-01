@@ -12,8 +12,8 @@ const newForm = async (event) => {
 
   //Checking for the required inputs for the expense
   if (name && payment_amount && due_date && description) {
-    const response = await fetch('/api/expense', {
-      method: 'POST',
+    const response = await fetch("/api/expense", {
+      method: "POST",
       body: JSON.stringify({
         name,
         payment_amount,
@@ -36,25 +36,25 @@ const newForm = async (event) => {
 };
 
 // Deletes the expense
-const delButtonHandler = async (event) => {
-  if (event.target.hasAttribute("data-id")) {
-    const id = event.target.getAttribute("data-id");
+const delButtonHandler = async (url) => {
+  const response = await fetch(url, {
+    method: "DELETE",
+  });
 
-    const response = await fetch(`/api/newexpense/${id}`, {
-      method: "DELETE",
-    });
-
-    if (response.ok) {
-      document.location.replace("/");
-    } else {
-      alert("Failed to delete expense");
-    }
+  if (response.ok) {
+    document.location.replace("/addexpense");
+  } else {
+    alert("Failed to delete expense");
   }
 };
 
 document.querySelector(".new-expense-form").addEventListener("submit", newForm);
-// document.querySelector(".new-expense-form").addEventListener("click", newForm);
 
-document
-  .querySelector(".expense-list")
-  .addEventListener("click", delButtonHandler);
+const DelUserExpense = document.querySelectorAll(".del-user-button");
+DelUserExpense.forEach((d) => {
+  d.addEventListener("click", () => {
+    const id = d.getAttribute("data-id");
+    const url =`/api/expense/user/${id}`
+    delButtonHandler(url);
+  });
+});
