@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { User } = require('../../models/Index');
 
-
+// Login page and login check
 router.post('/', async (req, res) => {
   try {
     const userData = await User.create(req.body);

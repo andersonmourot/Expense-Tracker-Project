@@ -1,3 +1,4 @@
+// Seed script to see the database
 const sequelize = require('../config/connection');
 const { User, Newexpense } = require('../models');
 

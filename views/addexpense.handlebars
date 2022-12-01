@@ -1,39 +1,37 @@
-<div class="row">
-  <div class="col-auto">
-    <h1>DINERO</h1>
-  </div>
-</div>
-
 <div class="row mt-4">
   <div class="col-md-6">
     <h2>Add a New Expense:</h2>
-
+<!-- HTML for the add page with input boxes -->
     <form class="form new-expense-form">
       <div class="form-group">
         <label for="expense-name">Expense Name:</label>
-        <input class="form-input" type="text" id="expense-name" name="expense-name" />
+        <input
+          class="form-input"
+          type="text"
+          id="expense-name"
+          name="expense-name"
+        />
       </div>
       <div class="form-group">
-        <label for="payment-amount">Payment Amount ($):</label>
-        <input class="form-input" type="number" id="payment-amount" name="payment-amount" />
+        <label for="payment-amount">Payment Amount:</label>
+        <input
+          class="form-input"
+          type="number"
+          id="payment-amount"
+          name="payment-amount"
+        />
+      </div>
+      <div class="form-group">
+        <label for="expense-desc">Description:</label>
+        <textarea
+          class="form-input"
+          id="expense-desc"
+          name="expense-desc"
+        ></textarea>
       </div>
       <div class="form-group">
         <label for="due-date">Payement Due Date:</label>
         <textarea class="form-input" id="due-date" name="due-date"></textarea>
-      </div>
-      <div class="form-group">
-        <label for="expense-desc">Description:</label>
-        <textarea class="form-input" id="expense-desc" name="expense-desc"></textarea>
-      </div>
-      <div class="form-group">
-        <label for="expense-type">Type:</label>
-        <select class="custom-select">
-          <option selected>Choose an expense type</option>
-          <option value="1">Entertainment</option>
-          <option value="2">Subscribtions</option>
-          <option value="3">Utilities</option>
-          <option value="3">Other</option>
-        </select>
       </div>
       <div class="form-group">
         <button type="submit" class="btn btn-success">Add</button>
@@ -41,22 +39,30 @@
     </form>
   </div>
 
+<!-- HTML for the active expenses the user has -->
+{{#if user.expenses}}
   {{#if Newexpense.length}}
-  <div class="col-md-6 expense-list">
-    <h3>Active Expenses:</h3>
+    <div class="col-md-6 expense-list">
+      <h3>Active Expenses:</h3>
 
-    {{#each Newexpenses as |Newexpense|}}
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <h4><a href="/expense/{{Newexpense.id}}">{{Newexpense.name}}</a></h4>
-      </div>
-      <div class="col-md-4">
-        <button class="btn btn-danger" data-id="{{Newexpense.id}}">DELETE</button>
-      </div>
+      {{#each Newexpenses as |Newexpense|}}
+        <div class="row mb-2">
+          <div class="col-md-8">
+            <h4><a
+                href="/expense/{{Newexpense.id}}"
+              >{{Newexpense.name}}</a></h4>
+          </div>
+          <div class="col-md-4">
+            <button
+              class="btn btn-danger"
+              data-id="{{Newexpense.id}}"
+            >DELETE</button>
+          </div>
+        </div>
+      {{/each}}
     </div>
-    {{/each}}
-  </div>
   {{/if}}
 </div>
 
-<script src="../public/js/profile.js"></script>
+<!-- <script src="../public/js/profile.js"></script> . -->
+<script src="/js/profile.js"></script>
