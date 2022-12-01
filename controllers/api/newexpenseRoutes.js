@@ -1,6 +1,5 @@
 const router = require('express').Router();
-const { Newexpense } = require('../../models');
-const Newexpense = require('../../models/Newexpense');
+const { Newexpense } = require('../../models/Newexpense');
 const auth = require('../../utils/auth');
 
 router.post('/', auth, async (req, res) => {
