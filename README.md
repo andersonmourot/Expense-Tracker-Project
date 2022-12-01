@@ -4,7 +4,10 @@
 "Dinero" The Expense Tracker App
 
 ## Description
-The "Dinero" The Expense Tracker App will help you organize and track expenses that need to be paid in the future.
+The "Dinero" Expense Tracker App will help you organize and track expenses that need to be paid in the future. The user can add and remove different expenses they have in their lives to easily keep up with what they are paying for and how much they need to save to make those payments. Whether it's streaming or gaming subscribtions, or utility payments for your home, keep track of what you are paying for, and what you will need to pay for, can save you a lot of time and stress down the road.
+
+## Technologies Used
+This app uses Node.js and Express.js, with Handlebars.js as the tempate engine. We used Materialize as our unique technology that was not taught in class. MySQL and Sequelize are both required to run this app and it follows the MVC paradigm.
 
 
 
