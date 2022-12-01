@@ -7,7 +7,7 @@
 The "Dinero" Expense Tracker App will help you organize and track expenses that need to be paid in the future. The user can add and remove different expenses they have in their lives to easily keep up with what they are paying for and how much they need to save to make those payments. Whether it's streaming or gaming subscribtions, or utility payments for your home, keep track of what you are paying for, and what you will need to pay for, can save you a lot of time and stress down the road.
 
 ## Technologies Used
-This app uses Node.js and Express.js, with Handlebars.js as the tempate engine. We used Materialize and Normalize.CSS as our unique technology that was not taught in class. MySQL and Sequelize are both required to run this app and it follows the MVC paradigm.
+This app uses Node.js and Express.js, with Handlebars.js as the tempate engine. We used Materialize, Normalize.CSS, and Nodemon as our unique technology that was not taught in class. MySQL and Sequelize are both required to run this app and it follows the MVC paradigm.
 
 
 ## User Story
@@ -23,12 +23,13 @@ link to my GitHub Repository:t
 https://github.com/andersonmourot/Expense-Tracker-Project
 
 
-## Screenshot
+## Screenshots
 
-![Screen Shot 2022-12-01 at 10 59 16 AM](https://user-images.githubusercontent.com/109611768/205113911-56fb4b28-a549-4270-8857-89097c7e4a54.png)
+![Screen Shot 2022-12-01 at 3 42 06 PM](https://user-images.githubusercontent.com/109611768/205165816-ed0d8105-4f66-453a-91f2-569042c96631.png)
 
+![Screen Shot 2022-12-01 at 3 42 36 PM](https://user-images.githubusercontent.com/109611768/205165833-02ae1ef6-1118-4527-83da-eac2d5ad1cf0.png)
 
-<img width="1724" alt="Screen Shot 2022-12-01 at 10 14 22 AM" src="https://user-images.githubusercontent.com/109611768/205103946-5251d853-c4a3-4fb9-af7d-944c2419c75c.png">
+![Screen Shot 2022-12-01 at 3 43 09 PM](https://user-images.githubusercontent.com/109611768/205165846-60b5d2cb-cf5c-4119-ac19-89cb1270448f.png)
 
 
 ## License
