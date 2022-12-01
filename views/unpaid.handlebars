@@ -1,10 +1,12 @@
 <!-- HTML for the expense itself -->
 <div class="text-center"></div>
     <h1>{{name}}</h1>
-    <h2>{{Newexpense.cost}} is due: {{Newexpense.due_date_range}}</h2>
+    <p>${{cost}} is due: {{due_date_range}}</p>
     <p>{{description}}</p>
-    <p>{{Newexpense.billtype}}</p>
+    <p>{{billtype}}</p>
     <p>
-        <button class="btn btn-danger">Mark as paid!</button>
+        <button class="btn btn-danger mark-paid" data-id="{{id}}">Mark as paid!</button>
     </p>
 </div>
+
+<script src="/js/profile.js"></script>

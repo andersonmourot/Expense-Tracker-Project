@@ -36,25 +36,50 @@ const newForm = async (event) => {
 };
 
 // Deletes the expense
-const delButtonHandler = async (url) => {
+const delButtonHandler = async (url, redirectUrl) => {
   const response = await fetch(url, {
     method: "DELETE",
   });
 
   if (response.ok) {
-    document.location.replace("/addexpense");
+    document.location.replace(redirectUrl);
   } else {
     alert("Failed to delete expense");
   }
 };
 
-document.querySelector(".new-expense-form").addEventListener("submit", newForm);
+if (document.querySelector(".new-expense-form")) {
+  document
+    .querySelector(".new-expense-form")
+    .addEventListener("submit", newForm);
+}
+
+const DelExpense = document.querySelectorAll(".del-button");
+DelExpense.forEach((d) => {
+  d.addEventListener("click", () => {
+    const id = d.getAttribute("data-id");
+    const url = `/api/expense/${id}`;
+    const redirectUrl = "/";
+    delButtonHandler(url, redirectUrl);
+  });
+});
 
 const DelUserExpense = document.querySelectorAll(".del-user-button");
 DelUserExpense.forEach((d) => {
   d.addEventListener("click", () => {
     const id = d.getAttribute("data-id");
-    const url =`/api/expense/user/${id}`
-    delButtonHandler(url);
+    const url = `/api/expense/user/${id}`;
+    const redirectUrl = "/addexpense";
+    delButtonHandler(url, redirectUrl);
   });
 });
+
+if (document.querySelector(".mark-paid")) {
+  const markPaid = document.querySelector(".mark-paid");
+  markPaid.addEventListener("click", () => {
+    const id = markPaid.getAttribute("data-id");
+    const url = `/api/expense/${id}`;
+    const redirectUrl = document.referrer;
+    delButtonHandler(url, redirectUrl);
+  });
+}
